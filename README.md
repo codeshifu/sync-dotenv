@@ -65,6 +65,12 @@ For CLI options, use the `--help` flag
 $ sync-dotenv --help
 ```
 
+To run `sync-dotenv` whenever the `.env` file changes, you can for example use [`nodemon`](https://www.npmjs.com/package/nodemon):
+
+```
+$ nodemon --watch .env --exec 'sync-dotenv --env .env --sample .env.example'
+```
+
 ## Examples
 
 Sync (with `.env.example`) before every commit using [husky](https://github.com/typicode/husky)
